@@ -5,11 +5,14 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 
 import com.uhutown.messenger.MessengerModMain;
+import com.uhutown.messenger.items.ChatItem;
 
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 
 public class ItemInit {
+
+    public static final ChatItem CHAT_ITEM = new ChatItem();
 
     public static ArrayList<Item> registeredItems = new ArrayList<>();
 
