@@ -2,6 +2,8 @@ package com.uhutown.messenger;
 
 import org.apache.logging.log4j.Logger;
 
+import com.troblecodings.core.net.NetworkHandler;
+import com.troblecodings.guilib.ecs.GuiHandler;
 import com.uhutown.messenger.proxy.CommonProxy;
 
 import net.minecraftforge.fml.common.Mod;
@@ -19,8 +21,11 @@ public class MessengerModMain {
 
     @SidedProxy(serverSide = "com.uhutown.messenger.proxy.CommonProxy", clientSide = "com.uhutown.messenger.proxy.ClientProxy")
     public static CommonProxy proxy;
+    public static GuiHandler handler;
+    public static NetworkHandler network;
     private static Logger logger;
     private static MessengerModMain instance;
+    private static boolean debug = false;
 
     public MessengerModMain() {
         instance = this;
@@ -32,6 +37,10 @@ public class MessengerModMain {
 
     public static Logger getLogger() {
         return logger;
+    }
+
+    public static boolean isDebug() {
+        return debug;
     }
 
     @EventHandler

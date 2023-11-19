@@ -1,0 +1,3 @@
+[submodule "guilib"]
+	path = guilib
+	url = https://github.com/MrTroble/guilib
